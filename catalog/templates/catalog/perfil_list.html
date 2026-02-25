@@ -1,0 +1,40 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+{% if perfiles %}
+<table>
+    <tbody>
+        <tr>
+            <td>Foto</td>
+            <td>Usuario</td>
+            <td>Localidad</td>
+            <td>Estado</td>
+            <td>Acciones</td>
+        </tr>
+        {% for perfil in perfiles %}
+            <tr>
+                <td>{{perfil.foto}}</td>
+                <td>{{perfil.usuario_django}}</td>
+                <td>{{perfil.localidad}}</td>
+
+                {% if perfil.is_valid %}
+                    <td>Activo</td>
+                {% else %}
+                    <td>Penalizado</td>
+                {% endif %}
+                <td>
+                <a href="{% url 'catalog:perfil_detail' perfil.pk %}">[Ver]</a>
+                {% if perms.catalog.permitir %}  
+                    <a href="{% url 'catalog:asignacion_permisos_usuario' perfil.pk %}">[Asignar Permisos]</a>
+                {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p>No hay perfiles de usuario en la biblioteca.</p>
+{% endif %}
+<a href="{% url 'catalog:registro_usuarios' %}">Registrar nuevo usuario</a>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Crear Nuevo Tipo de Permiso</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Crear Permiso</button>
+</form>
+{% endblock %}

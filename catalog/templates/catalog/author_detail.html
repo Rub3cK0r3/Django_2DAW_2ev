@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1>Pagina de detalle de autores</h1>
+
+    {% if author.birth_date %}
+        <p>Nació el {{ author.birth_date }}</p>
+    {% else %}
+        <p>No esta registrado su nacimiento</p>
+    {% endif %}
+
+    {% if author.death_date %}
+        <p>Fallecio el {{ author.death_date }}</p>
+    {% else %}
+        <p>No esta registrado su fallecimiento</p>
+    {% endif %}
+
+    <p>Tiene {{ author.books.count }} libros.</p>
+
+    <p><a href="{% url 'catalog:authors' %}">Volver a los autores</a></p>
+
+{% endblock content %}

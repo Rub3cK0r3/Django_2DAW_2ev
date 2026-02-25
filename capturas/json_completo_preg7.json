@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "direccion": "calle uno",
+        "localidad": "direccion uno",
+        "provincia": "provincia uno",
+        "foto": "/media/fotos/zendesk_que_es_panel_de_informes.jpg",
+        "fecha_penalizacion": "2222-11-22",
+        "usuario_django": 2,
+        "permisos": [
+            1
+        ]
+    },
+    {
+        "id": 2,
+        "direccion": "calle dos",
+        "localidad": "localidad dos",
+        "provincia": "provincia dos",
+        "foto": "/media/fotos/live-analytics-dashboards.webp",
+        "fecha_penalizacion": null,
+        "usuario_django": 5,
+        "permisos": [
+            1
+        ]
+    },
+    {
+        "id": 3,
+        "direccion": "direccion tres",
+        "localidad": "localidad tres",
+        "provincia": "provincia tres",
+        "foto": "/media/fotos/live-analytics-dashboards_eLKzyZh.webp",
+        "fecha_penalizacion": "2026-02-13",
+        "usuario_django": 6,
+        "permisos": [
+            1
+        ]
+    },
+    {
+        "id": 7,
+        "direccion": "direccion ruben",
+        "localidad": "calle ruben",
+        "provincia": "provincia ruben",
+        "foto": null,
+        "fecha_penalizacion": null,
+        "usuario_django": 1,
+        "permisos": [
+            1,
+            2
+        ]
+    }
+]

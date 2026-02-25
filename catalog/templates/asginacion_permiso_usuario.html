@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Asignar Permisos a : {{perfil}}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Asinar Permiso al Usuario</button>
+</form>
+<hr>
+<a href="{% url 'catalog:lista_perfiles' %}">Cancelar y volver</a>
+{% endblock %}

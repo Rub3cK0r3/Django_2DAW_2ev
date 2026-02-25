@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Datos del Usuario: {{perfil}}</h2>
+<p>Nombre : {{perfil.usuario_django.username}}</p>
+<p>Email : {{perfil.usuario_django.email}}</p>
+<p>Dirección : {{perfil.direccion}}</p>
+<p>Localidad : {{perfil.localidad}}</p>
+<p>Fecha penalización : {{perfil.fecha_penalizacion}}</p>
+<h3>Foto de Perfil:</h3>
+<p>{{perfil.foto}}</p>
+<hr>
+<ul>
+    {% for permiso in perfil.permisos.all %}
+        <li>{{permiso}}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'catalog:lista_perfiles' %}">Volver a lista Perfiles</a>
+
+{% endblock %}
